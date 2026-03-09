@@ -276,7 +276,6 @@ def myrun():
 				_ = """
 
 				if emailpcloud and passpcloud and folderidpcloud and platform and stream_key:
-					_ = """
 					#C1; run in background in streamlit cloud
 					def run_chain_thread_background():
 						result_video_path_arr = download_all_files_in_folder_pcloud(emailpcloud, passpcloud, folderidpcloud)
@@ -294,7 +293,6 @@ def myrun():
 						send_email_by_resend(RESEND_API_KEY, email_receiver, subject, html_body)
 
 						result = run_command_line(command, returnValue=True, ShowError=True)
-						st.write(result)
 
 						subject = "noreply"
 						html_body = f"Ending livestream from server URL: {streamlit_url}"
@@ -303,9 +301,9 @@ def myrun():
 					thread.start()
 					#thread.join() #Optional chờ thread chạy xong
 					#st.write("Thread completed, continue...")
-					_ = """
 
-					#C2; Để test chạy bình thường trên server sẽ ok hơn vì dễ bị tự động reload page khi download nhiều files quá lâu
+					_ = """
+					#C2; Chạy bình thường trên server sẽ ok hơn vì dễ bị tự động reload page khi download nhiều files quá lâu
 					result_video_path_arr = download_all_files_in_folder_pcloud(emailpcloud, passpcloud, folderidpcloud)
 					video_path_arr = result_video_path_arr
 					st.write(video_path_arr)
@@ -326,6 +324,7 @@ def myrun():
 					subject = "noreply"
 					html_body = f"Ending livestream from server URL: {streamlit_url}"
 					send_email_by_resend(RESEND_API_KEY, email_receiver, subject, html_body)									
+					_ = """
 
 					st.write(f"Starting livestream at platfom '{platform}' from server, you can quit now.")
 				else:
