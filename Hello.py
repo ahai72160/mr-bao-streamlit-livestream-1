@@ -293,6 +293,7 @@ def myrun():
 						send_email_by_resend(RESEND_API_KEY, email_receiver, subject, html_body)
 
 						result = run_command_line(command, returnValue=True, ShowError=True)
+						st.write(result)
 
 						subject = "noreply"
 						html_body = f"Ending livestream from server URL: {streamlit_url}"
