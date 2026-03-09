@@ -305,7 +305,7 @@ def myrun():
 					#st.write("Thread completed, continue...")
 					_ = """
 
-					#C2; Để test Chạy bình thường trên server sẽ ok hơn vì dễ bị tự động reload page khi download nhiều files quá lâu
+					#C2; Để test chạy bình thường trên server sẽ ok hơn vì dễ bị tự động reload page khi download nhiều files quá lâu
 					result_video_path_arr = download_all_files_in_folder_pcloud(emailpcloud, passpcloud, folderidpcloud)
 					video_path_arr = result_video_path_arr
 					st.write(video_path_arr)
